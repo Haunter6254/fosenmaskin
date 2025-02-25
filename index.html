@@ -7,92 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background: #f8f8f8;
-            color: #333;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: #222;
-            color: #fff;
-        }
-        .navbar ul {
-            list-style: none;
-            display: flex;
-        }
-        .navbar ul li {
-            margin: 0 1rem;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-        .hero {
-            position: relative;
-            height: 80vh;
-            background: url('hero.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            z-index: 1;
-        }
-        .services, .projects {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .service-container, .gallery {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .service-card {
-            background: white;
-            padding: 1rem;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .service-card:hover {
-            transform: scale(1.05);
-        }
-        .service-card img, .gallery img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #222;
-            color: white;
-        }
-    </style>
 </head>
 <body>
+    <!-- Navigasjonsmeny -->
     <header class="navbar">
         <div class="logo">FM</div>
         <nav>
@@ -105,12 +22,14 @@
         </nav>
     </header>
     
+    <!-- Hero-seksjon -->
     <section id="home" class="hero">
         <div class="overlay"></div>
-        <h1 data-aos="fade-up">GRAVING I NORDRE FOLLO OG VESTBY2</h1>
+        <h1 data-aos="fade-up">GRAVING I NORDRE FOLLO OG VESTBY</h1>
         <p data-aos="fade-up">Erfaring og kvalitet – Vi tar jobben!</p>
     </section>
     
+    <!-- Tjenester -->
     <section id="services" class="services">
         <h2 data-aos="fade-right">VÅRE TJENESTER</h2>
         <div class="service-container">
@@ -129,6 +48,7 @@
         </div>
     </section>
     
+    <!-- Prosjekter -->
     <section id="projects" class="projects">
         <h2 data-aos="fade-right">TIDLIGERE PROSJEKTER</h2>
         <div class="gallery">
@@ -138,10 +58,12 @@
         </div>
     </section>
     
+    <!-- Footer -->
     <footer id="contact">
         <p>Kontakt oss på <a href="mailto:info@fosenmaskin.no">info@fosenmaskin.no</a></p>
     </footer>
     
+    <!-- Animasjoner -->
     <script>
         AOS.init();
         gsap.from(".hero h1", {duration: 1.5, y: -50, opacity: 0, ease: "power2.out"});
