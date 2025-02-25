@@ -1,0 +1,102 @@
+/* Reset og generelle stiler */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* Navigasjonsmeny */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #222;
+    color: #fff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hero-seksjon */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+/* Tjenester og Prosjekter */
+.services, .projects {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.service-container, .gallery {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Kort med hover-effekt */
+.service-card {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card img, .gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #222;
+    color: white;
+}
