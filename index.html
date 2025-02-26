@@ -81,9 +81,41 @@
 
   <!-- LOKAL JAVASCRIPT-KODE -->
   <script>
-    console.log("Hei, jeg lever!");
-    alert("JavaScript kjører faktisk!");
+    // 1) Vi samler alle hero-bilder i en array
+    const heroImages = [
+      "images/hero1.jpg",
+      "images/hero2.jpg",
+      "images/hero3.jpg",
+      "images/hero4.jpg",
+      "images/hero5.jpg"
+    ];
+
+    let currentIndex = 0;
+    const heroSection = document.querySelector(".hero");
+
+    // For fade-effekt bruker vi CSS transition i .hero (se styles.css)
+    // Vi bytter bilde ved å sette opacity til 0 -> endre bakgrunn -> så sette opacity til 1
+    let isFadingOut = false;
+
+    function changeHeroImage() {
+      if (isFadingOut) return; // Hindre overlapp i fade
+      isFadingOut = true;
+
+      // Fade ut
+      heroSection.style.opacity = 0;
+
+      // Etter 1 sekund: bytt bilde, fade inn
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % heroImages.length;
+        heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+        heroSection.style.opacity = 1;
+        isFadingOut = false;
+      }, 1000);
+    }
+
+    // Sett første bilde + start intervall
+    heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+    setInterval(changeHeroImage, 5000);
   </script>
-  
 </body>
 </html>
