@@ -1,102 +1,144 @@
-/* Reset og generelle stiler */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-
-body {
-    background: #f8f8f8;
+  }
+  
+  body {
+    background-color: #f8f8f8;
     color: #333;
-}
-
-/* Navigasjonsmeny */
-.navbar {
+    /* Litt topp-padding, så hero ikke dekkes av navbaren */
+    padding-top: 100px;
+  }
+  
+  /* FAST NAVBAR */
+  .navbar {
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
     background: #222;
     color: #fff;
-}
-
-.navbar ul {
+    padding: 1rem 2rem;
+  }
+  
+  .logo img {
+    height: 80px;
+    width: 260px; /* Dobbelt så bred som høy */
+    object-fit: contain;
+  }
+  
+  .navbar ul {
     list-style: none;
     display: flex;
-}
-
-.navbar ul li {
+  }
+  
+  .navbar ul li {
     margin: 0 1rem;
-}
-
-.navbar a {
+  }
+  
+  .navbar a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-}
-
-/* Hero-seksjon */
-.hero {
+  }
+  
+  /* HERO-SEKSJON */
+  .hero {
     position: relative;
-    height: 80vh;
-    background: url('hero.jpg') no-repeat center center/cover;
+    height: 40vh;
+    /* Bilde settes fra JS, men vi sier her at det skal dekke og være sentrert */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.hero .overlay {
+    color: #fff;
+    /* Overgangen for fade */
+    transition: opacity 1s ease;
+  }
+  
+  .hero .overlay {
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    z-index: 1;
-}
-
-/* Tjenester og Prosjekter */
-.services, .projects {
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0; /* Under teksten */
+  }
+  
+  .hero h1,
+  .hero p {
+    position: relative; /* Overlay ligger bak */
+    z-index: 1;        /* Over overlay */
+  }
+  
+  /* TJENESTER-SEKSJON */
+  .section {
     padding: 4rem 2rem;
     text-align: center;
-}
-
-.service-container, .gallery {
-    display: flex;
+  }
+  
+  .section h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Kort med hover-effekt */
-.service-card {
-    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: #fff;
     padding: 1rem;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     border-radius: 8px;
+    text-align: left;
     transition: transform 0.3s;
-}
-
-.service-card:hover {
+  }
+  
+  .card:hover {
     transform: scale(1.05);
-}
-
-.service-card img, .gallery img {
+  }
+  
+  .card img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
-}
-
-/* Footer */
-footer {
+  }
+  
+  .card h3 {
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* FOOTER */
+  footer {
     text-align: center;
     padding: 2rem;
     background: #222;
-    color: white;
-}
+    color: #fff;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
