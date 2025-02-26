@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET / BASIS */
 * {
     margin: 0;
     padding: 0;
@@ -7,21 +7,21 @@
   }
   
   body {
-    background-color: #f8f8f8;
+    background: #f8f8f8;
     color: #333;
-    /* Litt topp-padding, så hero ikke dekkes av navbaren */
+    /* For at innholdet ikke havner under navbaren */
     padding-top: 100px;
   }
   
-  /* FAST NAVBAR */
+  /* NAVBAR */
   .navbar {
     position: fixed;
-    top: 0; 
+    top: 0;
     width: 100%;
     z-index: 9999;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     background: #222;
     color: #fff;
     padding: 1rem 2rem;
@@ -38,7 +38,7 @@
     display: flex;
   }
   
-  .navbar ul li {
+  .navbar li {
     margin: 0 1rem;
   }
   
@@ -48,21 +48,22 @@
     font-weight: bold;
   }
   
+  .navbar a.active {
+    text-decoration: underline;
+  }
+  
   /* HERO-SEKSJON */
   .hero {
     position: relative;
     height: 40vh;
-    /* Bilde settes fra JS, men vi sier her at det skal dekke og være sentrert */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #fff;
-    /* Overgangen for fade */
-    transition: opacity 1s ease;
+    transition: opacity 1s ease; /* For fade */
   }
   
   .hero .overlay {
@@ -71,17 +72,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 0; /* Under teksten */
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
   }
   
   .hero h1,
   .hero p {
-    position: relative; /* Overlay ligger bak */
-    z-index: 1;        /* Over overlay */
+    position: relative;
+    z-index: 1;
   }
   
-  /* TJENESTER-SEKSJON */
+  /* SEKSJONER */
   .section {
     padding: 4rem 2rem;
     text-align: center;
@@ -92,17 +93,14 @@
     font-size: 2rem;
   }
   
+  /* GRID-CONTAINER FOR TJENESTER */
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
-    background: lightgray;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  .grid-container div {
-    background: pink;
-    padding: 1rem;
-  }
-  
   
   .card {
     background: #fff;
@@ -133,16 +131,96 @@
     line-height: 1.5;
   }
   
-  /* FOOTER */
-  footer {
-    text-align: center;
+  /* ALMINNELIG SIDEINNHOLD PÅ UNDER-SIDER */
+  .page-content {
     padding: 2rem;
-    background: #222;
-    color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
   }
   
-  footer a {
+  /* KONTAKTSKJEMA */
+  .kontakt-skjema {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 1rem;
+  }
+  
+  .kontakt-skjema label {
+    margin: 0.5rem 0 0.2rem;
+  }
+  
+  .kontakt-skjema input,
+  .kontakt-skjema textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font: inherit;
+  }
+  
+  .kontakt-skjema button {
+    padding: 0.75rem;
+    background: #222;
     color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .kontakt-skjema button:hover {
+    background: #444;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #111;
+    color: #fff;
+    padding: 2rem 2rem;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Enkelt styling av hver kolonne */
+  .footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #f9c900; /* Gul strek */
+    padding-bottom: 0.3rem;
+  }
+  
+  .footer-col p {
+    line-height: 1.4;
+    font-size: 0.95rem;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 0.3rem;
+  }
+  
+  .footer-col a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-col a:hover {
     text-decoration: underline;
+  }
+  
+  /* Evt. styling for Google Map iframe */
+  .map iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    margin-top: 1rem;
   }
   

@@ -2,39 +2,36 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8">
-  <title>Fosen Maskin – Enkel versjon</title>
-  <!-- Kobler til CSS i samme mappe -->
+  <title>Fosen Maskin – Hjem</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- FAST NAVBAR -->
+  <!-- FAST NAVBAR (samme på alle sider) -->
   <header class="navbar">
     <div class="logo">
       <img src="images/logo.png" alt="Fosen Maskin Logo">
     </div>
     <nav>
       <ul>
-        <li><a href="#home">Hjem</a></li>
-        <li><a href="#services">Tjenester</a></li>
-        <li><a href="#projects">Prosjekter</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="om-oss.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt oss</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO-SEKSJON -->
+  <!-- HERO-SEKSJON med roterende bakgrunnsbilder -->
   <section id="home" class="hero">
     <div class="overlay"></div>
     <h1>LANDSBRUKSENTREPRENØR – FOSEN MASKIN</h1>
     <p>Vi tilbyr profesjonelle tjenester innen landbruk og entreprenørvirksomhet</p>
   </section>
 
-  <!-- TJENESTER-SEKSJON -->
+  <!-- TJENESTER-SEKSJON (eksempel) -->
   <section id="services" class="section">
     <h2>VÅRE TJENESTER</h2>
     <div class="grid-container">
-
       <div class="card">
         <img src="images/massetransport.png" alt="Massetransport">
         <h3>Massetransport</h3>
@@ -70,18 +67,54 @@
         <h3>Nydyrking og Drenering</h3>
         <p>Optimalisering av jordbruksarealer for bedre avling og vannhåndtering.</p>
       </div>
-
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <p>Kontakt oss på <a href="mailto:info@fosenmaskin.no">info@fosenmaskin.no</a></p>
+  <!-- FOOTER (samme på alle sider, men med 3 kolonner) -->
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>OM OSS</h3>
+        <p>
+          Maskinentreprenør R. Tobiassen AS ble etablert i 2020 av Robin Tobiassen. Vi har fokus på god kvalitet og sørger for at alle våre kunder er fornøyde med jobben som utføres. <br><br>
+          Vi samarbeider med flere bygg- og anleggsfirmaer for å kunne levere de beste løsningene for våre kunder. Vi kommer gjerne på gratis befaring hos deg.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>KONTAKT OSS</h3>
+        <ul>
+          <li>(+47) 464 66 312</li>
+          <li>post@maskinrt.no</li>
+          <li>1894 Rakkestad</li>
+          <li>Tilgjengelig 24/7</li>
+        </ul>
+        <!-- Eksempel på Google Maps-iframe (valgfri) -->
+        <div class="map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!..."
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>NAVIGASJON</h3>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+          <li><a href="kontakt.html">Kontakt oss</a></li>
+        </ul>
+      </div>
+
+    </div>
   </footer>
 
-  <!-- LOKAL JAVASCRIPT-KODE -->
+  <!-- LOKAL JAVASCRIPT-KODE for hero-bildefade -->
   <script>
-    // 1) Vi samler alle hero-bilder i en array
     const heroImages = [
       "images/hero1.jpg",
       "images/hero2.jpg",
@@ -92,19 +125,16 @@
 
     let currentIndex = 0;
     const heroSection = document.querySelector(".hero");
-
-    // For fade-effekt bruker vi CSS transition i .hero (se styles.css)
-    // Vi bytter bilde ved å sette opacity til 0 -> endre bakgrunn -> så sette opacity til 1
     let isFadingOut = false;
 
     function changeHeroImage() {
-      if (isFadingOut) return; // Hindre overlapp i fade
+      if (isFadingOut) return;
       isFadingOut = true;
 
       // Fade ut
       heroSection.style.opacity = 0;
 
-      // Etter 1 sekund: bytt bilde, fade inn
+      // Etter 1 sekund, bytt bilde + fade inn
       setTimeout(() => {
         currentIndex = (currentIndex + 1) % heroImages.length;
         heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
@@ -117,5 +147,6 @@
     heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
     setInterval(changeHeroImage, 5000);
   </script>
+
 </body>
 </html>
