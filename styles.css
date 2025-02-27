@@ -107,8 +107,30 @@
     margin: 0 auto;
   }
   
+  #services {
+  position: relative;
+  background: url('images/hero1.jpg') no-repeat center center/cover;
+  padding: 60px 0;
+  color: rgb(0, 0, 0);
+}
+
+#services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Mørkt overlegg for bedre lesbarhet */
+  z-index: 1;
+}
+
+#services .grid-container {
+  position: relative;
+  z-index: 2;
+}
   .card {
-    background: #fff;
+    background: #b9b6b6;
     padding: 1rem;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     border-radius: 8px;
@@ -299,3 +321,72 @@
   color: #fff;
 }
 
+
+
+.kontakt-skjema-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.kontakt-skjema-container h1 {
+  color: #333;
+}
+
+.kontakt-skjema-container p {
+  margin-bottom: 20px;
+}
+
+.kontakt-skjema {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kontakt-skjema label {
+  font-weight: bold;
+}
+
+.kontakt-skjema input,
+.kontakt-skjema textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.kontakt-skjema button {
+  background: #222;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.kontakt-skjema button:hover {
+  background: #c71a1a;
+  color: black;
+}
+
+.btn-contact {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #c71a1a;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-contact:hover {
+  background: #c71a1a;
+  color: black;
+}
