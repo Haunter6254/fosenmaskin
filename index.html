@@ -35,37 +35,33 @@
       <div class="card">
         <img src="images/massetransport.png" alt="Massetransport">
         <h3>Massetransport</h3>
-        <p>Vi transporterer jord, grus og annet massetransport for gårdsbruk og byggeprosjekter.</p>
-      </div>
-
-      <div class="card">
-        <img src="images/plog.png" alt="Brøyting">
-        <h3>Brøyting og Strøing</h3>
-        <p>Effektiv snørydding og strøing for sikre veier og gårdsplasser.</p>
-      </div>
-
-      <div class="card">
-        <img src="images/feiing.png" alt="Vårkosting">
-        <h3>Vårkosting og Feiing</h3>
-        <p>Vi fjerner vinterens sand og smuss for rene og trygge veier.</p>
-      </div>
-
-      <div class="card">
-        <img src="images/graving.png" alt="Graving">
-        <h3>Tomterydding og Graving</h3>
-        <p>Forberedelse av tomter for bygging, landskapsutforming og utgraving.</p>
+        <p>Vi transporterer jord, grus, stein og annen massetransport for private, gårdsbruk og byggeprosjekter.</p>
       </div>
 
       <div class="card">
         <img src="images/leiekjoring.png" alt="Beitepussing">
         <h3>Leiekjøring innen landbruket</h3>
-        <p>Vedlikehold av beiteområder og fjerning av busker langs veier.</p>
+        <p>Vi tilbyr leiekjøring med traktor innen landbruket.</p>
       </div>
-
+      <div class="card">
+        <img src="images/graving.png" alt="Graving">
+        <h3>Tomterydding og Graving</h3>
+        <p>Forberedelse av tomter for bygging, landskapsutforming og utgraving. Generelle graveprosjekter</p>
+      </div>
       <div class="card">
         <img src="images/riving.png" alt="Drenering">
         <h3>Riving</h3>
-        <p>Systematisk demontering / riving av mindre konstruksjoner og sanering av fraksjoner.</p>
+        <p>Systematisk demontering / riving av mindre konstruksjoner og sanering av fraksjoner. Levering til godkjent deponi</p>
+      </div>
+      <div class="card">
+        <img src="images/plog.png" alt="Brøyting">
+        <h3>Brøyting / Strøing & Feiing</h3>
+        <p>Effektiv snørydding og strøing for sikre veier, gårdsplasser og større arealer. Vårkosting og oppsamling av sand, grus og smuss for rene og trygge veier og oppstillingsplasser</p>
+      </div>
+      <div class="card">
+        <img src="images/verksted.jpg" alt="Verksted">
+        <h3>Mekanisk Verksted</h3>
+        <p>Vi tilbyr mekaniske tjenester innenfor anlegg og landbruk. Skuffeservice, sveising & industriservice</p>
       </div>
     </div>
   </section>
@@ -115,6 +111,7 @@
 
   <!-- LOKAL JAVASCRIPT-KODE for hero-bildefade -->
   <script>
+    
     const heroImages = [
       "images/hero1.jpg",
       "images/hero2.jpg",
@@ -146,6 +143,30 @@
     // Sett første bilde + start intervall
     heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
     setInterval(changeHeroImage, 5000);
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+      const images = JSON.parse(card.getAttribute("data-images"));
+      let currentIndex = 0;
+      const imgElement = card.querySelector("img");
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        imgElement.style.opacity = 0; 
+
+        setTimeout(() => {
+          imgElement.src = images[currentIndex];
+          imgElement.style.opacity = 1;
+        }, 500);
+      }, 4000);
+    });
+  });
+
+  
   </script>
 
 </body>
