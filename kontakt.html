@@ -21,57 +21,58 @@
     </nav>
   </header>
 
-  <!-- Hovedinnhold for "Kontakt oss"-siden -->
-  <main class="page-content">
-    <h1>Kontakt oss</h1>
-    <p>
-      Du kan nå oss på telefon, e-post eller fylle inn skjemaet under.
-    </p>
-    <!-- Eksempel på et enkelt kontaktskjema -->
-    <form action="#" method="post" class="kontakt-skjema">
-      <label for="navn">Navn:</label>
-      <input type="text" id="navn" name="navn" required>
+  <!-- KONTAKTSEKSJON -->
+  <main class="kontakt-container">
+    <div class="kontakt-info">
+      <h2>KONTAKT OSS</h2>
+      <ul>
+        <li>📞 (+47) 4567 5253</li>
+        <li>✉️ <a href="mailto:post@fosenmaskin.no">post@fosenmaskin.no</a></li>
+        <li>📍 7130 Brekstad</li>
+        <li>⏰ Tilgjengelig 24/7</li>
+      </ul>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2907.9777286316057!2d9.636276067615256!3d63.714432067874284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sno!4v1740652915079!5m2!1sen!2sno" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
 
-      <label for="epost">E-post:</label>
-      <input type="email" id="epost" name="epost" required>
-
-      <label for="melding">Melding:</label>
-      <textarea id="melding" name="melding" rows="5" required></textarea>
-
-      <button type="submit">Send melding</button>
-    </form>
+    <div class="kontakt-social">
+      <h2>FØLG OSS</h2>
+      <div class="facebook-box">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61573022780039&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </div>
   </main>
+
+  <!-- CTA (Call to Action) -->
+  <section class="cta">
+    <div class="cta-text">
+      <h2>TRENGER DU HJELP MED Å FORNYE UTEOMRÅDET?</h2>
+      <p>
+        Fosen Maskin AS kan hjelpe deg med planlegging og utføring av arbeid ute. Trenger du hjelp med en ny uteplass, sanering av oljetank, eller annen grunnarbeid? Kontakt oss i dag for en gratis befaring!
+      </p>
+    </div>
+    <a href="kontakt.html" class="cta-button">KONTAKT OSS</a>
+  </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-container">
-
       <div class="footer-col">
         <h3>OM OSS</h3>
         <p>
-            Fosen Maskin AS ble etablert i 2023. Vi har fokus på god kvalitet og sørger for at alle våre kunder er fornøyde med jobben som utføres. <br><br>
-            Vi samarbeider med flere bygg- og anleggsfirmaer for å kunne levere de beste løsningene for våre kunder. Vi kommer gjerne på gratis befaring hos deg.
+          Fosen Maskin AS ble etablert i 2023. Vi har fokus på god kvalitet og sørger for at alle våre kunder er fornøyde med jobben som utføres.
         </p>
       </div>
-
       <div class="footer-col">
         <h3>KONTAKT OSS</h3>
         <ul>
-            <li>(+47) 4567 5253</li>
-            <li>post@fosenmaskin.no</li>
-            <li>7130 Brekstad</li>
-            <li>Alltid åpent</li>
+          <li>(+47) 4567 5253</li>
+          <li><a href="mailto:post@fosenmaskin.no">post@fosenmaskin.no</a></li>
+          <li>7130 Brekstad</li>
+          <li>Alltid åpent</li>
         </ul>
-        <div class="map">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!..."
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-          </iframe>
-        </div>
       </div>
-
       <div class="footer-col">
         <h3>NAVIGASJON</h3>
         <ul>
@@ -80,7 +81,6 @@
           <li><a href="kontakt.html">Kontakt oss</a></li>
         </ul>
       </div>
-
     </div>
   </footer>
 
