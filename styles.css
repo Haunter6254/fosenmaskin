@@ -250,7 +250,7 @@
 }
 
 .kontakt-info a {
-  color: yellow;
+  color: #c71a1a;
   text-decoration: none;
 }
 
@@ -295,6 +295,7 @@
 }
 
 .cta-button:hover {
-  background: yellow;
+  background: #c71a1a;
+  color: #fff;
 }
 
