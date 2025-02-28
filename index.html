@@ -1,179 +1,56 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <title>Fosen Maskin – Hjem</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fosen Maskin - Landbruksentreprenør</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .highlight {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d9534f;
+            margin-top: 20px;
+        }
+        .contact {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- FAST NAVBAR (samme på alle sider) -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="images/logo.png" alt="Fosen Maskin Logo">
+    <div class="container">
+        <img src="images/logo.png" alt="Fosen Maskin Logo" class="logo">
+        <h1>Fosen Maskin - Landbruksentreprenør</h1>
+        <p>Vi tar på oss oppdrag som leiekjøring med traktor innen landbruket, enkle graveoppdrag og massetransport.</p>
+        <p>Vi tilbyr også vintervedlikehold, feiing og vårkosting, samt mekanisk verksted for landbruk og anlegg.</p>
+        <p class="highlight">Ta kontakt i dag for gratis befaring!</p>
+        <p class="contact">Telefon: 4567 5253</p>
+        <p class="contact">E-post: <a href="mailto:post@fosenmaskin.no">post@fosenmaskin.no</a></p>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="om-oss.html">Om oss</a></li>
-        <li><a href="kontakt.html">Kontakt oss</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- HERO-SEKSJON med roterende bakgrunnsbilder -->
-  <section id="home" class="hero">
-    <div class="overlay"></div>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Din pålitelige partner innen landbruk og entreprenørvirksomhet</h1>
-        <p>
-          Vi leverer profesjonelle tjenester innen landbruk, anlegg og transport.  
-          Med lang erfaring og moderne maskiner sikrer vi effektive løsninger  
-          for både private, gårdsbruk og anleggsvirksomhet  
-        </p>
-        <a href="kontakt-skjema.html" class="btn-contact">Kontakt oss</a>
-      </div>
-    </section>
-    
-    
-  </section>
-
-  <!-- TJENESTER-SEKSJON (eksempel) -->
-  <section id="services" class="section">
-    <div class="grid-container">
-      <div class="card">
-        <img src="images/massetransport.png" alt="Massetransport">
-        <h3>Massetransport</h3>
-        <p>Vi transporterer jord, grus, stein og annen massetransport for private, gårdsbruk og byggeprosjekter.</p>
-      </div>
-
-      <div class="card">
-        <img src="images/leiekjoring.png" alt="Beitepussing">
-        <h3>Leiekjøring innen landbruket</h3>
-        <p>Vi tilbyr leiekjøring med traktor innen landbruket.</p>
-      </div>
-      <div class="card">
-        <img src="images/graving.png" alt="Graving">
-        <h3>Tomterydding og Graving</h3>
-        <p>Forberedelse av tomter for bygging, landskapsutforming og utgraving. Generelle graveprosjekter</p>
-      </div>
-      <div class="card">
-        <img src="images/riving.png" alt="Drenering">
-        <h3>Riving</h3>
-        <p>Systematisk demontering / riving av mindre konstruksjoner og sanering av fraksjoner. Levering til godkjent deponi</p>
-      </div>
-      <div class="card">
-        <img src="images/plog.png" alt="Brøyting">
-        <h3>Brøyting / Strøing & Feiing</h3>
-        <p>Effektiv snørydding og strøing for sikre veier, gårdsplasser og større arealer. Vårkosting og oppsamling av sand, grus og smuss for rene og trygge veier og oppstillingsplasser</p>
-      </div>
-      <div class="card">
-        <img src="images/verksted.jpg" alt="Verksted">
-        <h3>Mekanisk Verksted</h3>
-        <p>Vi tilbyr mekaniske tjenester innenfor anlegg og landbruk. Skuffeservice, sveising & industriservice</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER (samme på alle sider, men med 3 kolonner) -->
-  <footer>
-    <div class="footer-container">
-
-      <div class="footer-col">
-        <h3>OM OSS</h3>
-        <p>
-          Fosen Maskin AS ble etablert i 2023. Vi har fokus på god kvalitet og sørger for at alle våre kunder er fornøyde med jobben som utføres. <br><br>
-          Vi samarbeider med flere bygg- og anleggsfirmaer for å kunne levere de beste løsningene for våre kunder. Vi kommer gjerne på gratis befaring hos deg.
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h3>KONTAKT OSS</h3>
-        <ul>
-          <li>(+47) 4567 5253</li>
-          <li>post@fosenmaskin.no</li>
-          <li>7130 Brekstad</li>
-          <li>Alltid åpent</li>
-        </ul>
-        <!-- Eksempel på Google Maps-iframe (valgfri) -->
-        <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2907.9777286316057!2d9.636276067615256!3d63.714432067874284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sno!4v1740652915079!5m2!1sen!2sno" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h3>NAVIGASJON</h3>
-        <ul>
-          <li><a href="index.html">Hjem</a></li>
-          <li><a href="om-oss.html">Om oss</a></li>
-          <li><a href="kontakt.html">Kontakt oss</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- LOKAL JAVASCRIPT-KODE for hero-bildefade -->
-  <script>
-    
-    const heroImages = [
-      "images/hero1.jpg",
-      "images/hero2.jpg",
-      "images/hero3.jpg",
-      "images/hero4.jpg",
-      "images/hero5.jpg",
-       "images/hero6.jpg"
-    ];
-
-    let currentIndex = 0;
-    const heroSection = document.querySelector(".hero");
-    let isFadingOut = false;
-
-    function changeHeroImage() {
-      if (isFadingOut) return;
-      isFadingOut = true;
-
-      // Fade ut
-      heroSection.style.opacity = 0;
-
-      // Etter 1 sekund, bytt bilde + fade inn
-      setTimeout(() => {
-        currentIndex = (currentIndex + 1) % heroImages.length;
-        heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
-        heroSection.style.opacity = 1;
-        isFadingOut = false;
-      }, 1000);
-    }
-
-    // Sett første bilde + start intervall
-    heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
-    setInterval(changeHeroImage, 5000);
-
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach((card) => {
-      const images = JSON.parse(card.getAttribute("data-images"));
-      let currentIndex = 0;
-      const imgElement = card.querySelector("img");
-
-      setInterval(() => {
-        currentIndex = (currentIndex + 1) % images.length;
-        imgElement.style.opacity = 0; 
-
-        setTimeout(() => {
-          imgElement.src = images[currentIndex];
-          imgElement.style.opacity = 1;
-        }, 500);
-      }, 4000);
-    });
-  });
-
-  
-  </script>
-
 </body>
 </html>
