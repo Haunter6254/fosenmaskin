@@ -26,21 +26,32 @@
     <h1>Kontakt oss</h1>
     <p>Fyll inn skjemaet nedenfor, så tar vi kontakt med deg så snart som mulig.</p>
     
-    <form action="#" method="post" class="kontakt-skjema">
-      <label for="navn">Navn:</label>
-      <input type="text" id="navn" name="navn" required>
-
-      <label for="epost">E-post:</label>
-      <input type="email" id="epost" name="epost" required>
-
-      <label for="telefon">Telefon:</label>
-      <input type="tel" id="telefon" name="telefon">
-
-      <label for="melding">Melding:</label>
-      <textarea id="melding" name="melding" rows="5" required></textarea>
-
-      <button type="submit">Send melding</button>
+    <div class="form-container">
+      <h2>Kontaktskjema</h2>
+      <form
+      action="https://formspree.io/f/xgvogvbq"
+      class="fs-form"
+      target="_top"
+      method="POST"
+    >
+      <div class="fs-field">
+        <label class="fs-label" for="name">Navn</label>
+        <input class="fs-input" id="name" name="name" />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="email">Email</label>
+        <input class="fs-input" id="email" name="email" required />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="message">Melding</label>
+        <textarea class="fs-textarea" id="message" name="message"></textarea>
+        <p class="fs-description">Vi svarer vanligvis innen 1 virkedag.</p>
+      </div>
+      <div class="fs-button-group">
+        <button class="fs-button" type="submit">Send</button>
+      </div>
     </form>
+  </div>
   </main>
 
   <!-- FOOTER (samme som på andre sider) -->
@@ -48,7 +59,8 @@
     <div class="footer-container">
       <div class="footer-col">
         <h3>OM OSS</h3>
-        <p>Fosen Maskin AS ble etablert i 2023. Vi har fokus på god kvalitet og sørger for at alle våre kunder er fornøyde med jobben som utføres.</p>
+        Fosen Maskin AS ble etablert i 2023. Vi har fokus på god kvalitet og sørger for at alle våre kunder er fornøyde med jobben som utføres. <br><br>
+        Vi samarbeider med flere bygg- og anleggsfirmaer for å kunne levere de beste løsningene for våre kunder. Vi kommer gjerne på gratis befaring hos deg.
       </div>
       <div class="footer-col">
         <h3>KONTAKT OSS</h3>

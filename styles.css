@@ -437,3 +437,24 @@
   line-height: 1.6;
   margin-bottom: 40px;
 }
+
+.form-container {
+  margin-top: 30px;
+  text-align: left;
+}
+.form-container input, .form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-container button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
